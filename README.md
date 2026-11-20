@@ -14,15 +14,14 @@ https://www.youtube.com/watch?v=Wn-6Ls-yJAQ
 https://vimjoyer.com/nixmap/#focus=nixos-flake
 
 ## leo todo
-- purge everything ui from wsl host
 - purge all unused/different software
 - rename poseidon to something seomthing wsl
 - move from vscodium to vscode
 - install zed
 - test config on full vm
-- install cool cli file manager
 - install zen browser
 - maybe laptop/darwin
+- update some aspects/configs based on jonathans
 
 ```
 exec: "xdg-open,x-www-browser,www-browser,wslview": executable file not found in $PATH
