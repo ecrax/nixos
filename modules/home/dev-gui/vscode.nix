@@ -4,12 +4,6 @@
     { lib, pkgs, ... }:
     let
       ext = inputs.nix-vscode-extensions.extensions.${pkgs.stdenv.hostPlatform.system}.vscode-marketplace;
-
-      prettier = "esbenp.prettier-vscode";
-      prettierLangs = [
-        "typescript" "typescriptreact" "javascript" "javascriptreact"
-        "json" "jsonc" "css" "scss" "markdown" "mdx"
-      ];
     in
     {
       programs.vscode = {
@@ -22,14 +16,15 @@
           enableUpdateCheck = false;
           enableExtensionUpdateCheck = false;
 
-          extensions = with ext; [
-            pmndrs.poimandres-theme # verify the id in the Extensions view
-            github.copilot
-            github.copilot-chat
-            esbenp.prettier-vscode
-            charliermarsh.ruff
-            myriad-dreamin.tinymist
-            rust-lang.rust-analyzer
+          extensions = [
+            ext.pmndrs."poimandres-theme"
+            ext.github.copilot
+            ext.github."copilot-chat"
+            ext.esbenp."prettier-vscode"
+            ext.charliermarsh.ruff
+            ext.myriad-dreamin."tinymist"
+            ext.rust-lang."rust-analyzer"
+            ext.esbenp."prettier-vscode"
           ];
 
           userSettings = {
@@ -56,7 +51,6 @@
         };
       };
 
-      fonts.fontconfig.enable = true;
       home.packages = [ pkgs.nerd-fonts.jetbrains-mono ];
     };
 }
