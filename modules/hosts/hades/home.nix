@@ -17,7 +17,7 @@
           plasma-manager
 
           solaar
-          spotatui
+          # spotatui
         ];
 
         home.packages = with pkgs; [
