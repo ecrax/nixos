@@ -6,11 +6,11 @@
       {
         imports = with homeAspects; [
           communication
-          creative-2d
-          creative-3d
-          creative-audio
-          creative-games
-          creative-video
+          # creative-2d
+          # creative-3d
+          # creative-audio
+          # creative-games
+          # creative-video
           dev-core
           dev-gui
           office
