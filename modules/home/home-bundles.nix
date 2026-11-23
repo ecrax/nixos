@@ -6,11 +6,11 @@
     ];
 
     creative-2d.imports = [
-      "2d-pkgs"
+      pkgs-2d
     ];
 
     creative-3d.imports = [
-      "3d-pkgs"
+      pkgs-3d
       blender
     ];
 
@@ -30,7 +30,7 @@
 
     dev-core.imports = [
       bun
-      dev-pkgs
+      pkgs-dev
       direnv
       git
       helix

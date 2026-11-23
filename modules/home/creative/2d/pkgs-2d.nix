@@ -1,5 +1,5 @@
 {
-  flake.modules.homeManager."2d-pkgs" =
+  flake.modules.homeManager.pkgs-2d =
     { pkgs, ... }:
     {
       home.packages = with pkgs; [
