@@ -47,7 +47,7 @@
 
             "[typst]"."editor.defaultFormatter" = "myriad-dreamin.tinymist";
             "[python]"."editor.defaultFormatter" = "charliermarsh.ruff";
-          }
+          };
         };
       };
 
