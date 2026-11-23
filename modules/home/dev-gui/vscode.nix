@@ -4,6 +4,7 @@
     { lib, pkgs, ... }:
     let
       ext = inputs.nix-vscode-extensions.extensions.${pkgs.stdenv.hostPlatform.system}.vscode-marketplace;
+      allowUnfreeExt = drv: drv.overrideAttrs (prev: { meta = prev.meta // { license = [ ]; }; });
     in
     {
       programs.vscode = {
@@ -18,8 +19,8 @@
 
           extensions = [
             ext.pmndrs.pmndrs
-            ext.github.copilot
-            ext.github."copilot-chat"
+            (allowUnfreeExt ext.github.copilot)
+            (allowUnfreeExt ext.github."copilot-chat")
             ext.esbenp."prettier-vscode"
             ext.charliermarsh.ruff
             ext.myriad-dreamin."tinymist"
