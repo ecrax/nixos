@@ -12,7 +12,7 @@
       ...
     }:
     {
-      imports = [ homeAspects.dev-pkgs ];
+      imports = [ homeAspects.pkgs-dev ];
       programs.helix = {
         enable = true;
         settings = {

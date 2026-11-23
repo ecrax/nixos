@@ -12,7 +12,7 @@
       ...
     }:
     {
-      imports = [ homeAspects.dev-pkgs inputs.lazyvim.homeManagerModules.default ];
+      imports = [ homeAspects.pkgs-dev inputs.lazyvim.homeManagerModules.default ];
       programs.lazyvim = {
         enable = true;
 
