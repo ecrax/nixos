@@ -49,10 +49,12 @@
     ];
 
     office.imports = [
+      helium
       latex
       libreoffice
       librewolf
       typst
+      zen
       zotero
     ];
   };
