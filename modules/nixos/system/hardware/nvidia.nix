@@ -5,23 +5,17 @@
   flake.modules.nixos.nvidia =
     {
       pkgs,
-      config,
       ...
     }:
-    let
-      nvidiaDriverChannel = config.boot.kernelPackages.nvidiaPackages.production;
-    in
     {
       services.xserver.videoDrivers = [ "nvidia" ];
 
       hardware = {
         nvidia = {
           open = true;
-          nvidiaSettings = false;
-          powerManagement.enable = true;
-          # dynamicBoost.enable = true; # only relevant for laptops
+          nvidiaSettings = false; # nvidia settings gui
           modesetting.enable = true;
-          package = nvidiaDriverChannel;
+          branch = "stable";
         };
 
         graphics = {
@@ -35,6 +29,7 @@
         vulkan-tools
         mesa-demos
         libva-utils
+        nvtopPackages.nvidia
       ];
     };
 }

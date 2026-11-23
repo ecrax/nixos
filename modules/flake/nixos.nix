@@ -52,10 +52,11 @@
               hostPlatform = system;
               config.allowUnfree = allowUnfree;
               config.allowBroken = false;
-              overlays = [
-                inputs.nur.overlays.default
-                inputs.rust-overlay.overlays.default
-              ];
+              # config.cudaSupport = true; # may cause a lot of recompilation
+              # overlays = [
+              #   inputs.nur.overlays.default
+              #   inputs.rust-overlay.overlays.default
+              # ];
             };
 
             nix = {
@@ -76,12 +77,14 @@
                   "flakes"
                 ];
                 substituters = [
+                  "https://cache.nixos.org/"
                   "https://nix-community.cachix.org"
                   "https://cache.nixos-cuda.org"
                 ];
                 trusted-public-keys = [
                   "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
                   "cache.nixos-cuda.org:74DUi4Ye579gUqzH4ziL9IyiJBlDpMRn9MBN8oNan9M="
+                  "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
                 ];
               };
             };
@@ -114,16 +117,5 @@
         };
       }
     );
-
-    checks =
-      config.flake.nixosConfigurations
-      |> lib.mapAttrsToList (
-        name: nixos: {
-          ${nixos.config.nixpkgs.hostPlatform.system} = {
-            "configurations:nixos:${name}" = nixos.config.system.build.toplevel;
-          };
-        }
-      )
-      |> lib.mkMerge;
   };
 }

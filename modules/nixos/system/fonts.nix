@@ -17,6 +17,9 @@
         noto-fonts-color-emoji
         nerd-fonts.fira-code
         nerd-fonts.meslo-lg
+        nerd-fonts.hack
+        nerd-fonts.fira-code
+        nerd-fonts.jetbrains-mono
         openmoji-color
         twemoji-color-font
         font-awesome

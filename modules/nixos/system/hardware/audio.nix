@@ -14,6 +14,7 @@
       alsa-utils
       pavucontrol
       pamixer
+      # pipewire.jack
     ];
   };
 }

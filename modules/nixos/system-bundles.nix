@@ -11,17 +11,13 @@
       nh # includes auto clean
       fonts
       power-manager
+      ssd
+      default-libraries
     ];
 
     plasma-desktop.imports = [
-      kde
-      # kde-sddm
-      kde-gdm
-      wayland-common
-    ];
-
-    hyprland-desktop.imports = [
-      hyprland
+      kde-plm
+      kde-plasma
       wayland-common
     ];
   };

@@ -64,9 +64,14 @@
     };
 
     # Rust toolchain overlay
-    rust-overlay = {
-      url = "github:oxalica/rust-overlay";
+    fenix = {
+      url = "github:nix-community/fenix";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # Audio Production
+    musnix = {
+      url = "github:musnix/musnix";
     };
   };
 

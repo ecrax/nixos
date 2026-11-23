@@ -35,14 +35,14 @@
       git
       helix
       lazyvim
-      rust
-      zsh
-      yazi
       tmux
+      yazi
+      zsh
     ];
 
     dev-gui.imports = [
       alacritty
+      foot
       hoppscotch
       vscodium
     ];

@@ -6,6 +6,9 @@
         aseprite
         gimp
         krita
+        nomacs
+        inkscape
+        darktable
       ];
     };
 }

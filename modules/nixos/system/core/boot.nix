@@ -25,6 +25,8 @@
         "udev.log_priority=3"
       ];
       consoleLogLevel = 0;
+
+      supportedFilesystems = [ "ntfs" ];
     };
 
     # To avoid systemd services hanging on shutdown

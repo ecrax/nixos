@@ -19,13 +19,10 @@ https://vimjoyer.com/nixmap/#focus=nixos-flake
 - move from vscodium to vscode
 - install zed
 - test config on full vm
-- install zen browser
-- maybe laptop/darwin
+- install zen/helium browser
+  - with netflix support
 - update some aspects/configs based on jonathans
-
-```
-exec: "xdg-open,x-www-browser,www-browser,wslview": executable file not found in $PATH
-```
+- maybe laptop/darwin
 
 ## NixOS todo
 Incomplete list of software I plan to add:
