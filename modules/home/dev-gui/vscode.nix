@@ -17,7 +17,7 @@
           enableExtensionUpdateCheck = false;
 
           extensions = [
-            ext.pmndrs."poimandres-theme"
+            ext.pmndrs.pmndrs
             ext.github.copilot
             ext.github."copilot-chat"
             ext.esbenp."prettier-vscode"
