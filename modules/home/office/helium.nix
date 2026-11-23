@@ -1,4 +1,4 @@
-{ homeAspects, ... }: {
+{ homeAspects, inputs, ... }: {
   flake.modules.homeManager.helium =
     {
       pkgs,
