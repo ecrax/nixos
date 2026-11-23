@@ -1,32 +1,20 @@
 {
-  flake.modules.nixos.kde-sddm =
-    {
-      pkgs,
-      config,
-      ...
-    }:
-    {
-      services = {
-        displayManager.sddm = {
-          enable = true;
-          wayland.enable = true;
-          autoNumlock = true;
-          theme = "where_is_my_sddm_theme";
-        };
+  flake.modules.nixos.kde-plm = { pkgs, ... }: {
+    services = {
+      displayManager = {
+        plasma-login-manager.enable = true;
+        defaultSession = "plasma";
       };
-
-      environment.systemPackages = [
-        (pkgs.where-is-my-sddm-theme.override {
-          themeConfig.General = {
-            background = "${../../../../wallpapers/login.jpg}";
-            backgroundFillMode = "aspect";
-            passwordFontSize = "16";
-            passwordInputCursorVisible = "false";
-            passwordCharacter = "●";
-            # passwordInputBackground = "#60ffffff";
-            # passwordInputRadius = "10";
-          };
-        })
-      ];
     };
+
+    environment.etc = {
+      "plasmalogin.conf" = {
+        text = ''
+          [Greeter][Wallpaper][org.kde.image][General]
+          Image=file://${pkgs.kdePackages.plasma-workspace-wallpapers}/share/wallpapers/DarkestHour/contents/images/2560x1600.jpg
+        '';
+        mode = "0444"; # 0644 originally
+      };
+    };
+  };
 }
