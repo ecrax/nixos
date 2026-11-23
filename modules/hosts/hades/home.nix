@@ -11,7 +11,8 @@
           creative-audio
           creative-games
           creative-video
-          development
+          dev-core
+          dev-gui
           office
           plasma-manager
 
