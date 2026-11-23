@@ -44,7 +44,8 @@
       alacritty
       foot
       hoppscotch
-      vscodium
+      vscode
+      zed
     ];
 
     office.imports = [

@@ -16,9 +16,7 @@ https://vimjoyer.com/nixmap/#focus=nixos-flake
 ## leo todo
 - purge all unused/different software
 - rename poseidon to something seomthing wsl
-- move from vscodium to vscode
-- install zed
-- test config on full vm
+
 - install zen/helium browser
   - with netflix support
 - update some aspects/configs based on jonathans
